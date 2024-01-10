@@ -1,0 +1,53 @@
+to create project using the Django :- django-admin startproject project_name
+
+to run the program:- python manage.py runserver
+
+to create an app with in the project used the following comands:-
+python manage.py startapp Home 
+
+**here Home is an the app name
+
+**
+migration folder is not created into Project folder
+
+** then use the following commands:-
+--python manage.py makemigration
+--python manage.py migrate
+
+
+##to create the super user on the admin site use the following instructions##
+1)python manage.py createsuperuser  
+admin username=admin 
+password is not remember then use the python manage.py changepassword <username> this command
+
+***to create database steps:-***
+1)model refister
+2)app register
+
+after register the Contact then run the :-
+ python manage.py makemigrations
+
+ python manage.py migrate 
+
+
+## to display the all submit data of result then apply the following steps:-
+
+To the django model related operation then the
+--> python manage.py shell command is used
+
+Then to 
+from Home.models import Contact
+Contact.objects.all()
+
+to access the only the first isreted data element then the--> Contact.objects.all()[0] Ex:- name--> Contact.objects.all()[0].name
+
+To filter the the data:-
+Contact.objects.filter(name='name')
+
+
+
+I can accept the challenge and recreate the beautiful website of the icecream and serve/upload it on the server. 
+
+
+
+import notes:- refer the officia documents of the django

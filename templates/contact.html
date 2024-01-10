@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Conatct | {% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0">
+    <img src="https://source.unsplash.com/random/?icecream&1" alt="Contact-form-image" width="100%" height="400">
+    <h3 class="text-center my-2">Contact Us</h3>
+</div>
+<div class="container">
+    <form method="post" action="/contact/">
+      {% comment %} {% csrf_token %} is used to submit the data into the form  {% endcomment %}
+      {% csrf_token %} 
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+          <small>we do not disclose your email to anyone.</small>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone No</label>
+            <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter your phone no">
+          </div>
+          <div class="form-group">
+            <label for="desc">Why are tou want to conatact you from our</label>
+            <input type="text" class="form-control" id="desc" name="desc" placeholder="Enter text">
+          </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+{% endblock body %}
